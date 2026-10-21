@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>吳仲恩 | 個人履歷與自我介紹</title>
+  <meta name="description" content="吳仲恩的個人自我介紹與履歷網頁。Bokokobokobo - 喜愛看直播、玩遊戲、打排球，持續精進英文能力。">
+  
+  <!-- Google Fonts: 日系圓體 & 無襯線字體 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===================================================
+       1. 全域變數與日系清新藍調色彩系統 (Color System)
+       =================================================== */
+    :root {
+      --primary-blue: #3273dc;
+      --primary-dark: #1e4a8a;
+      --primary-light: #e8f2fc;
+      --soft-blue: #5b92e5;
+      --sky-blue: #bfe0fb;
+      --bg-page: #f6f9fd;
+      --bg-card: #ffffff;
+      --bg-glass: rgba(255, 255, 255, 0.88);
+      --text-main: #233142;
+      --text-sub: #546a83;
+      --text-muted: #889bb0;
+      --border-color: #e2edfa;
+      --accent-badge: #e3effd;
+      --accent-coral: #ff7e67;
+      --shadow-sm: 0 4px 12px rgba(50, 115, 220, 0.06);
+      --shadow-md: 0 8px 24px rgba(50, 115, 220, 0.10);
+      --shadow-lg: 0 16px 36px rgba(50, 115, 220, 0.14);
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 28px;
+      --transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Zen Maru Gothic', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.75;
+      position: relative;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(var(--sky-blue) 1px, transparent 1px),
+        radial-gradient(rgba(50, 115, 220, 0.08) 1px, transparent 1px);
+      background-size: 36px 36px;
+      background-position: 0 0, 18px 18px;
+    }
+
+    /* 頂部光暈背景裝飾 */
+    .bg-glow {
+      position: absolute;
+      top: -120px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 780px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(191, 224, 251, 0.65) 0%, rgba(246, 249, 253, 0) 70%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* ===================================================
+       2. 導航列 (Navbar)
+       =================================================== */
+    header {
+      position: sticky;
+      top: 16px;
+      z-index: 100;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-glass);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(226, 237, 250, 0.8);
+      border-radius: 999px;
+      padding: 10px 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-logo-badge {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--soft-blue), var(--primary-blue));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      font-weight: bold;
+      box-shadow: 0 3px 8px rgba(50, 115, 220, 0.25);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 8px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-sub);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 999px;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-blue);
+      background-color: var(--primary-light);
+    }
+
+    /* ===================================================
+       3. 核心容器配置 (Container Layout)
+       =================================================== */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 30px 24px 80px 24px;
+    }
+
+    /* ===================================================
+       4. Hero 英雄區塊 (Hero / Profile Section)
+       =================================================== */
+    .hero-section {
+      text-align: center;
+      padding: 40px 0 50px 0;
+      position: relative;
+    }
+
+    .japanese-sub-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-badge);
+      color: var(--primary-blue);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(50, 115, 220, 0.15);
+    }
+
+    .avatar-wrapper {
+      position: relative;
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 24px auto;
+    }
+
+    .avatar-circle {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #ffffff, #dcecfa);
+      border: 4px solid #ffffff;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .avatar-circle:hover {
+      transform: scale(1.04) rotate(2deg);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .avatar-svg {
+      width: 90px;
+      height: 90px;
+    }
+
+    .avatar-badge-status {
+      position: absolute;
+      bottom: 6px;
+      right: 6px;
+      background: #ffffff;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      color: var(--primary-blue);
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      background: #10b981;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.3); opacity: 1; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+
+    .hero-name {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .hero-name-kana {
+      display: block;
+      font-size: 0.88rem;
+      color: var(--primary-blue);
+      font-weight: 500;
+      letter-spacing: 3px;
+      margin-bottom: 6px;
+    }
+
+    /* 一句話介紹 Bokokobokobo 趣味互動按鈕區 */
+    .slogan-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #ffffff;
+      border: 1.5px dashed var(--soft-blue);
+      padding: 10px 24px;
+      border-radius: 999px;
+      margin-top: 12px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      user-select: none;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .slogan-pill:hover {
+      background: var(--primary-light);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-style: solid;
+    }
+
+    .slogan-pill:active {
+      transform: scale(0.96);
+    }
+
+    .bubble-icon {
+      animation: float 2.4s ease-in-out infinite alternate;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-4px); }
+    }
+
+    .slogan-hint {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    /* ===================================================
+       5. 通用區塊與標題樣式 (Section Title & Card)
+       =================================================== */
+    section {
+      margin-bottom: 60px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 22px;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 12px;
+      position: relative;
+    }
+
+    .section-header::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background: var(--primary-blue);
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-jp {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: rgba(50, 115, 220, 0.25);
+    }
+
+    /* ===================================================
+       6. 關於我 (About Me)
+       =================================================== */
+    .about-card {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .about-text {
+      font-size: 1.02rem;
+      color: var(--text-sub);
+      line-height: 1.9;
+    }
+
+    .about-info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .info-item {
+      background: var(--bg-page);
+      padding: 14px 18px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .info-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--primary-light);
+      color: var(--primary-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .info-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+    }
+
+    .info-value {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    /* ===================================================
+       7. 興趣區塊 (Hobbies Grid - 3個興趣)
+       =================================================== */
+    .hobby-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .hobby-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hobby-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--sky-blue), var(--primary-blue));
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .hobby-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(50, 115, 220, 0.3);
+    }
+
+    .hobby-card:hover::before {
+      opacity: 1;
+    }
+
+    .hobby-icon-wrap {
+      width: 72px;
+      height: 72px;
+      border-radius: 20px;
+      background: var(--primary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+      transition: var(--transition);
+    }
+
+    .hobby-card:hover .hobby-icon-wrap {
+      transform: scale(1.1) rotate(-4deg);
+      background: #e1effc;
+    }
+
+    .hobby-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .hobby-jp-tag {
+      font-size: 0.76rem;
+      color: var(--primary-blue);
+      background: var(--accent-badge);
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .hobby-desc {
+      font-size: 0.88rem;
+      color: var(--text-sub);
+      line-height: 1.6;
+    }
+
+    /* ===================================================
+       8. 技能與想學 (Skills & Ambition - 英文)
+       =================================================== */
+    .skill-card {
+      background: linear-gradient(145deg, #ffffff, #f7faff);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .skill-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .skill-title-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .skill-icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--primary-blue), var(--soft-blue));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      box-shadow: 0 4px 12px rgba(50, 115, 220, 0.25);
+    }
+
+    .skill-main-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .skill-type-tag {
+      font-size: 0.78rem;
+      color: #0369a1;
+      background: #e0f2fe;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .skill-quote {
+      font-size: 0.95rem;
+      color: var(--text-sub);
+      background: rgba(232, 242, 252, 0.5);
+      border-left: 4px solid var(--primary-blue);
+      padding: 14px 18px;
+      border-radius: 0 10px 10px 0;
+      margin-bottom: 22px;
+      line-height: 1.7;
+    }
+
+    .english-plan-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+
+    .plan-box {
+      background: #ffffff;
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .plan-number {
+      background: var(--primary-light);
+      color: var(--primary-blue);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .plan-text h4 {
+      font-size: 0.9rem;
+      color: var(--text-main);
+      margin-bottom: 2px;
+    }
+
+    .plan-text p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* ===================================================
+       9. 作品與活動 (Works & Activities - 探索中)
+       =================================================== */
+    .empty-state-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      padding: 40px 24px;
+      text-align: center;
+      border: 2px dashed #cfe2f8;
+      position: relative;
+    }
+
+    .empty-icon {
+      font-size: 3rem;
+      margin-bottom: 12px;
+      display: inline-block;
+      animation: float 2.5s ease-in-out infinite alternate;
+    }
+
+    .empty-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .empty-desc {
+      font-size: 0.92rem;
+      color: var(--text-sub);
+      max-width: 480px;
+      margin: 0 auto 18px auto;
+      line-height: 1.7;
+    }
+
+    .roadmap-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary-light);
+      color: var(--primary-blue);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 999px;
+    }
+
+    /* ===================================================
+       10. 捲動淡入動畫 (Scroll Fade-in Animations)
+       =================================================== */
+    .fade-init {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .fade-init.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* 延遲階梯效果 */
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+
+    /* ===================================================
+       11. 氣泡微互動 (Floating Bubbles Canvas / Click)
+       =================================================== */
+    .floating-bubble {
+      position: fixed;
+      pointer-events: none;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(91, 146, 229, 0.45));
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      box-shadow: 0 4px 10px rgba(50, 115, 220, 0.15);
+      z-index: 9999;
+      animation: riseAndFade 1.6s ease-out forwards;
+    }
+
+    @keyframes riseAndFade {
+      0% {
+        transform: translateY(0) scale(0.6);
+        opacity: 0.9;
+      }
+      100% {
+        transform: translateY(-130px) scale(1.4);
+        opacity: 0;
+      }
+    }
+
+    /* ===================================================
+       12. 頁尾與返回頂部 (Footer & Scroll to Top)
+       =================================================== */
+    footer {
+      text-align: center;
+      padding: 30px 20px 40px 20px;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .footer-quote {
+      font-size: 0.9rem;
+      color: var(--primary-blue);
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-glass);
+      border: 1px solid var(--border-color);
+      backdrop-filter: blur(8px);
+      color: var(--primary-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      opacity: 0;
+      visibility: hidden;
+      z-index: 90;
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--primary-blue);
+      color: #ffffff;
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* ===================================================
+       13. 響應式優化 (Mobile & Desktop Responsiveness)
+       =================================================== */
+    @media (max-width: 640px) {
+      .container {
+        padding: 20px 16px 60px 16px;
+      }
+
+      nav {
+        padding: 8px 16px;
+      }
+
+      .nav-links a {
+        padding: 4px 10px;
+        font-size: 0.82rem;
+      }
+
+      .hero-name {
+        font-size: 2rem;
+      }
+
+      .slogan-pill {
+        font-size: 1rem;
+        padding: 8px 20px;
+      }
+
+      .card, .skill-card {
+        padding: 20px;
+      }
+
+      .hobby-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .english-plan-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 背景柔和光暈 -->
+  <div class="bg-glow"></div>
+
+  <!-- 頂部導航 -->
+  <header>
+    <nav>
+      <a href="#hero" class="nav-brand">
+        <span class="nav-logo-badge">吳</span>
+        <span>吳仲恩</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">關於我</a></li>
+        <li><a href="#hobbies">興趣</a></li>
+        <li><a href="#skills">技能</a></li>
+        <li><a href="#activities">經歷</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    
+    <!-- 英雄形象區塊 (Hero Section) -->
+    <section id="hero" class="hero-section fade-init">
+      <div class="japanese-sub-tag">
+        <span>✦</span> ポートフォリオ ＆ 自己紹介
+      </div>
+
+      <div class="avatar-wrapper">
+        <div class="avatar-circle">
+          <!-- 日系簡約風格 SVG 頭像插畫 -->
+          <svg class="avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="45" fill="#E8F2FC"/>
+            <!-- 頭髮與輪廓 -->
+            <path d="M26 44C26 30 36 22 50 22C64 22 74 30 74 44C74 48 72 52 70 54C67 46 62 43 50 43C38 43 33 46 30 54C28 52 26 48 26 44Z" fill="#2B4660"/>
+            <!-- 臉部 -->
+            <path d="M32 45C32 58 40 68 50 68C60 68 68 58 68 45V42H32V45Z" fill="#FCECE1"/>
+            <!-- 眼睛 -->
+            <circle cx="43" cy="49" r="2.5" fill="#2B4660"/>
+            <circle cx="57" cy="49" r="2.5" fill="#2B4660"/>
+            <!-- 微笑 -->
+            <path d="M47 56C48.5 58 51.5 58 53 56" stroke="#2B4660" stroke-width="2" stroke-linecap="round"/>
+            <!-- 腮紅 -->
+            <circle cx="39" cy="53" r="3" fill="#FFAAA6" fill-opacity="0.6"/>
+            <circle cx="61" cy="53" r="3" fill="#FFAAA6" fill-opacity="0.6"/>
+            <!-- 衣服 -->
+            <path d="M24 88C24 74 36 70 50 70C64 70 76 74 76 88V95H24V88Z" fill="#5B92E5"/>
+            <!-- 領口 -->
+            <path d="M44 70L50 78L56 70" fill="#FFFFFF"/>
+          </svg>
+        </div>
+        <div class="avatar-badge-status">
+          <span class="status-dot"></span>
+          <span>Online</span>
+        </div>
+      </div>
+
+      <span class="hero-name-kana">WU ZHONG EN</span>
+      <h1 class="hero-name">吳仲恩</h1>
+
+      <!-- 一句話介紹 / 點擊產生趣味日系氣泡互動 -->
+      <div>
+        <button id="sloganBtn" class="slogan-pill" title="點擊發射泡泡！">
+          <span class="bubble-icon">🫧</span>
+          <span>Bokokobokobo</span>
+        </button>
+        <span class="slogan-hint">（點擊泡泡互動 ♪）</span>
+      </div>
+    </section>
+
+    <!-- 關於我 (About Me) -->
+    <section id="about" class="fade-init">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>🌿</span> 關於我
+        </h2>
+        <span class="section-jp">ABOUT ME・私について</span>
+      </div>
+
+      <div class="card about-card">
+        <p class="about-text">
+          哈囉！我是<strong>吳仲恩</strong>。「Bokokobokobo」是我的個人標語，象徵著像泡泡一樣充滿活力、隨性自在又充滿無限可能。
+          平時喜歡在直播與遊戲中發掘新事物，也熱愛在排球場上享受揮灑汗水與團隊扣殺的快感。目前正在積極提升自己的英文實力，朝著更開闊的世界邁進！
+        </p>
+
+        <div class="about-info-grid">
+          <div class="info-item">
+            <div class="info-icon">👤</div>
+            <div>
+              <div class="info-label">姓名</div>
+              <div class="info-value">吳仲恩</div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">💬</div>
+            <div>
+              <div class="info-label">座右銘</div>
+              <div class="info-value">Bokokobokobo</div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">🎯</div>
+            <div>
+              <div class="info-label">近期目標</div>
+              <div class="info-value">英語力養成中</div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">✨</div>
+            <div>
+              <div class="info-label">風格</div>
+              <div class="info-value">日系簡約・晴空藍</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 個人興趣 (Hobbies) -->
+    <section id="hobbies">
+      <div class="section-header fade-init">
+        <h2 class="section-title">
+          <span>✨</span> 個人興趣
+        </h2>
+        <span class="section-jp">HOBBIES・好きなこと</span>
+      </div>
+
+      <div class="hobby-grid">
+        <!-- 興趣 1: 看直播 -->
+        <div class="hobby-card fade-init delay-1">
+          <div class="hobby-icon-wrap">📺</div>
+          <span class="hobby-jp-tag">ライブ配信視聴</span>
+          <h3 class="hobby-title">看直播</h3>
+          <p class="hobby-desc">
+            喜歡追隨各類型精彩直播，從即時互動、幽默談話到遊戲實況，享受與觀眾一同歡笑的自在時光。
+          </p>
+        </div>
+
+        <!-- 興趣 2: 玩遊戲 -->
+        <div class="hobby-card fade-init delay-2">
+          <div class="hobby-icon-wrap">🎮</div>
+          <span class="hobby-jp-tag">ゲームプレイ</span>
+          <h3 class="hobby-title">玩遊戲</h3>
+          <p class="hobby-desc">
+            熱愛探索各式遊戲世界，沉浸在富有挑戰性的關卡、策略思考與好友組隊通關的樂趣之中。
+          </p>
+        </div>
+
+        <!-- 興趣 3: 打排球 -->
+        <div class="hobby-card fade-init delay-3">
+          <div class="hobby-icon-wrap">🏐</div>
+          <span class="hobby-jp-tag">バレーボール</span>
+          <h3 class="hobby-title">打排球</h3>
+          <p class="hobby-desc">
+            迷戀排球在空中停滯的瞬間。享受跳躍發球、穩定接球與隊友互相補位防守的熱血默契！
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技能與學習目標 (Skills & Learning) -->
+    <section id="skills" class="fade-init">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>📘</span> 擅長或想學的技能
+        </h2>
+        <span class="section-jp">SKILLS & GOALS・学びたいこと</span>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-header">
+          <div class="skill-title-group">
+            <div class="skill-icon-box">🔤</div>
+            <div>
+              <div class="skill-main-name">英文 (English)</div>
+              <span class="skill-type-tag">🌱 現正精進目標</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-quote">
+          「Language is the road map of a culture.」<br>
+          掌握英文不僅是學習一種溝通工具，更能看懂全世界第一手資訊、流暢觀賞國外直播，並結交更多國際同好！
+        </div>
+
+        <div class="english-plan-grid">
+          <div class="plan-box">
+            <div class="plan-number">1</div>
+            <div class="plan-text">
+              <h4>日常沉浸聽力</h4>
+              <p>透過歐美實況與英語影片鍛鍊語感</p>
+            </div>
+          </div>
+          <div class="plan-box">
+            <div class="plan-number">2</div>
+            <div class="plan-text">
+              <h4>生活口說表達</h4>
+              <p>練習流暢表達日常想法與個人觀點</p>
+            </div>
+          </div>
+          <div class="plan-box">
+            <div class="plan-number">3</div>
+            <div class="plan-text">
+              <h4>國際社群互動</h4>
+              <p>在遊戲與社群平台結交跨國朋友</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 經歷與作品 (Activities / Journey) -->
+    <section id="activities" class="fade-init">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>🚀</span> 作品與活動經歷
+        </h2>
+        <span class="section-jp">JOURNEY & CANVAS・未来の足跡</span>
+      </div>
+
+      <div class="empty-state-card">
+        <div class="empty-icon">🌱</div>
+        <h3 class="empty-title">精彩故事正在書寫中</h3>
+        <p class="empty-desc">
+          目前尚未累積公開作品或大型活動紀錄，但就像一張潔白純淨的日系畫布，隨時準備探索未知、蓄勢待發，紀錄下一趟旅程的新冒險！
+        </p>
+        <div class="roadmap-badge">
+          <span>✦</span> 蓄力進行式・Coming Soon
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- 回到頂端按鈕 -->
+  <button id="backToTop" class="back-to-top" title="回到頂部" aria-label="回到頂部">
+    ↑
+  </button>
+
+  <!-- 頁尾 -->
+  <footer>
+    <p class="footer-quote">🫧 Bokokobokobo</p>
+    <p>© 2026 吳仲恩 (Wu Zhong-En) ・ 日系極簡個人自我介紹</p>
+  </footer>
+
+  <!-- ===================================================
+       14. JavaScript 互動與淡入動畫邏輯
+       =================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      /* --- 1. 捲動淡入動畫 (Intersection Observer) --- */
+      const fadeElements = document.querySelectorAll('.fade-init');
+      
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.12
+      };
+
+      const fadeObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            // 動畫觸發一次後即可停止監聽，提高效能
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      fadeElements.forEach(el => fadeObserver.observe(el));
+
+
+      /* --- 2. 回到頂部按鈕 (Back to Top) --- */
+      const backToTopBtn = document.getElementById('backToTop');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 280) {
+          backToTopBtn.classList.add('show');
+        } else {
+          backToTopBtn.classList.remove('show');
+        }
+      });
+
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+
+
+      /* --- 3. Bokokobokobo 趣味泡泡互動 --- */
+      const sloganBtn = document.getElementById('sloganBtn');
+
+      function createBubble(x, y) {
+        const bubble = document.createElement('div');
+        bubble.classList.add('floating-bubble');
+        
+        // 隨機大小與飄移
+        const size = Math.floor(Math.random() * 26) + 18; // 18px ~ 44px
+        bubble.style.width = `${size}px`;
+        bubble.style.height = `${size}px`;
+        bubble.style.left = `${x - size / 2 + (Math.random() * 40 - 20)}px`;
+        bubble.style.top = `${y - size / 2 + (Math.random() * 20 - 10)}px`;
+
+        document.body.appendChild(bubble);
+
+        // 動畫結束自動移除 DOM
+        setTimeout(() => {
+          bubble.remove();
+        }, 1600);
+      }
+
+      sloganBtn.addEventListener('click', (e) => {
+        const rect = sloganBtn.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top;
+
+        // 連續產生多個浪漫日系淡藍泡泡
+        for (let i = 0; i < 7; i++) {
+          setTimeout(() => {
+            createBubble(centerX, centerY);
+          }, i * 90);
+        }
+      });
+
+    });
+  </script>
+</body>
+</html>
